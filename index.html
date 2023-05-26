@@ -1,10 +1,30 @@
----
-title: 首頁
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>首頁</title>
+  
+  <link rel="stylesheet" href="./assets/style/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  
+</head>
+
+<body>
+  <header class="header  padding-top-bottom-20 container">
+    <div class="d-flex justify-content-between padding-bottom-20 border-bottom">
+    <h1><a href="#"><img src="./assets/images/logo.png" alt="logo">AI工具王</a></h1>
+    <ul class="d-flex">
+      <li><a class="font-bold mr-20" href="index.html">首頁</a></li>
+      <li><a class="font-bold" href="page2.html">定價</a></li>
+    </ul>
+    </div>  
+  </header>
+
+  
 <div class="content-1 container">
 <p class="fz-120 fw-900 mb-40 line-height-12">透過AI<br>AI工具王的<br>強大模型<br>讓您的業務更聰明</p>
 <a class="btn line-height-12" href="#" style="width: 160px;">開始使用</a>
@@ -279,3 +299,35 @@ current: index
 
 
 
+
+
+  <footer class="footer container">
+    <div class="d-flex justify-content-between">
+      <div class="order-1">
+      <a class="fz-80 fw-900 mb-8 line-height-12" href="index.html">首頁</a>
+      <a class="fz-80 fw-900 line-height-12" href="page2.html">定價</a>
+      </div>
+      <img class="order-2" src="./assets/images/logo.png" style="width: 250px; height: 40px;" alt="logo">
+    </div>
+  </footer>
+  <div class="footer-bottom d-flex f-wrap justify-content-between container">
+    
+    <p class="mr-100 order-1">AI工具王 © 2023</p>
+    <div class="d-flex order-2">
+    <a class="mr-20" href="https://www.facebook.com/">Facebook</a>
+    <a class="mr-20" href="https://twitter.com/?lang=zh-Hant">Twitter</a>
+    <a class="#" href="https://www.instagram.com/">Instagram</a>
+    </div>
+    <p class="color-text order-3" id="scrollToTop">Back to top</p>
+
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+
+</html>
