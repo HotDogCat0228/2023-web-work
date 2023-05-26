@@ -1,0 +1,47 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.5;
+    font-family: $font-style;
+    background: $color-1;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+h2{
+    color: $color-6;
+    font-size: 32px;
+    font-weight: 700;
+}
+@media(max-width:767px){
+    h2{
+        font-size: 20px;
+    }
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: $color-6;
+}
+p{
+    color: $color-6;
+}
+span{
+    display: block;
+}
+option {
+    background-color: #eaeaea;
+    color: #333;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+}
+option:checked {
+    background-color: #333;
+    color: #fff;
+}

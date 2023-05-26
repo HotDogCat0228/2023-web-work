@@ -1,0 +1,52 @@
+.content-2{
+    .pay-card{
+        width: 49%;
+        border: 1px solid $color-2;
+        border-radius: 25px;
+        transition: border-color 0.5s ease; //使得顏色有時間緩衝變亮
+        &-header{
+        padding: 20px 32px;
+        h3{
+            color: $color-6;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        ul{
+            height: 144px;
+        }
+        
+        }        
+        &-footer{
+        padding: 20px 32px;
+        a{  
+            display: flex;
+            span{
+                margin-left: 20px;
+                display: block;
+            }
+        }
+        .price-color{
+            color: $color-3;
+        }
+        }
+        // 當鼠標移動字卡面時 外框顏色變亮
+        &:hover{
+            border-color: $color-6;
+        }
+    }
+    
+    @media (max-width:767px) {
+    .pay-card{
+        width: 100%;
+        &-header{
+            padding: 20px;
+            ul{
+                height: 70px;
+            }
+            li{
+                margin-bottom: 0;
+            }
+        }
+    }
+    }
+}

@@ -1,0 +1,19 @@
+.content-3{
+    .law{
+        h3{
+            color: $color-6;
+            font-weight: 700;
+        }
+        li{
+            padding-bottom: 40px;
+        }
+    }
+    @media (max-width:767px) {
+        .law{
+            flex-direction: column;
+            h2{
+                margin-bottom: 48px;
+            }
+        }
+    }
+}
