@@ -655,7 +655,7 @@ option:checked {
   -o-transition: border-color 0.5s ease;
   transition: border-color 0.5s ease; }
   .content-5 li .plus {
-    background-image: url("../../../assets/images/icons/add.png");
+    background-image: url("../../assets/images/icons/add.png");
     width: 24px;
     height: 24px;
     margin-right: 20px; }
@@ -676,7 +676,7 @@ option:checked {
   max-height: 100px; }
 
 .content-5 .faq.active .plus {
-  background-image: url("../../../assets/images/icons/remove.png"); }
+  background-image: url("../../assets/images/icons/remove.png"); }
 
 @media (max-width: 767px) {
   .content-5 h2 {
