@@ -298,6 +298,19 @@ option:checked {
 .href-hover:hover {
   color: #F2EFE7; }
 
+.swiper {
+  display: none !important; }
+
+.swiper-pagination {
+  font-size: 16px;
+  color: #333; }
+
+@media (max-width: 767px) {
+  .swiper {
+    display: block !important; }
+  .swiper-off {
+    display: none; } }
+
 @media (max-width: 767px) {
   .overflow-x {
     overflow-x: auto;
@@ -534,7 +547,7 @@ option:checked {
   width: 120px;
   height: 30px; }
 
-.content-3 .card {
+.content-3 .customer-card {
   padding: 40px;
   width: 32%;
   background: rgba(255, 255, 255, 0.08);
@@ -546,26 +559,23 @@ option:checked {
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 16px; }
-  .content-3 .card p {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1; }
+  .content-3 .customer-card .text-area {
+    height: 215px;
+    overflow: hidden; }
 
-.content-3 .profile img {
-  width: 40px;
-  height: 40px; }
+.content-3 .profile {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .content-3 .profile img {
+    width: 40px;
+    height: 40px; }
 
 @media (max-width: 767px) {
-  .content-3 .card {
-    width: 100%; }
-    .content-3 .card p {
-      margin-bottom: 20px;
-      height: auto; }
+  .content-3 .customer-card {
+    margin-bottom: 20px; }
   .content-3 .profile p {
-    margin-bottom: 0; }
-  .content-3 ul {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; } }
+    margin-bottom: 0; } }
 
 .content-3 .law h3 {
   color: #FFFFFF;
@@ -595,7 +605,7 @@ option:checked {
   border-radius: 16px; }
   .content-4 .card .img-list {
     overflow: hidden;
-    border-radius: 25px 25px 0px 0px; }
+    border-radius: 16px 16px 0px 0px; }
     .content-4 .card .img-list img {
       -webkit-transition: 0.3s all ease-in-out;
       -o-transition: 0.3s all ease-in-out;
@@ -614,7 +624,7 @@ option:checked {
   padding: 20px 32px; }
 
 .content-4 img {
-  border-radius: 25px 25px 0px 0px; }
+  border-radius: 16px 16px 0px 0px; }
 
 @media (max-width: 767px) {
   .content-4 .card {
