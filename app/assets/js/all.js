@@ -3,6 +3,15 @@ axios.get('https://2023-engineer-camp.zeabur.app/api/v1/works').then(function(re
 });
 
 
+//SWIPER
+var swiper = new Swiper(".mySwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
+
+
 //jQuery back to top
 $(function(){
   $('#scrollToTop').on("click",function() {
