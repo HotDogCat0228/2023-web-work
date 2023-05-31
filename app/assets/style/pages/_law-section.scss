@@ -1,0 +1,11 @@
+.law-section{
+    @media (max-width: 767px) {
+        .law {
+          flex-direction: column;
+          h2 {
+            margin-bottom: 48px;
+          }
+        }
+      }
+}
+

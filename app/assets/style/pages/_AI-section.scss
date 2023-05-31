@@ -1,0 +1,134 @@
+.AI-section{
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.AI-section-header {
+  h2 {
+    text-align: center;
+  }
+  @media (max-width: 767px) {
+    .order-2 {
+      order: 3;
+    }
+    .order-3 {
+      order: 2;
+    }
+  }
+}
+.search-row{
+  position: relative;
+}
+.search-icon{
+  position: absolute;
+  top: 15px;
+  left: 16px;
+}
+.search {
+  position: relative;
+  background: $color-5;
+  width: 100%;
+  border-radius: 16px;
+  padding: 20px 40px;
+}
+// dropdown
+.dropdown {
+  position: relative;
+}
+.dropdown-240 {
+  width: 240px;
+}
+.dropdown-144 {
+  width: 144px;
+}
+@media(max-width:767px){
+  .dropdown-240 {
+    width: 100%;
+  }
+}
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #f2f2f2;
+  padding: 20px 40px;
+  border-radius: 16px;
+}
+
+.dropdown-btn:hover {
+  border-color: #000000;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background: white;
+  top: 70px;
+  left: 0;
+  display: none;
+  margin-top: 4px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px 0;
+  border-radius: 16px;
+  z-index: 1;
+  
+}
+
+.dropdown-menu li{
+    margin-bottom: 8px;
+    padding: 4px 40px;
+  }
+.dropdown-menu a {
+  width: 168px;
+  color: #000000;
+  text-align: left;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+
+.AI-card{
+  width: 32%;
+  border-left: 1px solid rgb(218, 211, 211);
+  border-right: 1px solid rgb(218, 211, 211);
+  border-bottom: 1px solid rgb(218, 211, 211);
+  border-radius:16px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  .img-list{
+      overflow: hidden;
+      border-radius: 16px 16px 0px 0px;
+      img {
+      transition: 0.3s all ease-in-out;
+      vertical-align: middle; //消除img底部空白
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  span{
+      color:#020202;
+  }
+  .card-padding{
+    padding:20px 32px;
+  }
+  img{
+    border-radius: 16px 16px 0px 0px;
+  }
+  
+}
+
+@media (max-width:767px) {
+  .AI-card{
+      width: 100%;
+  }
+}
+

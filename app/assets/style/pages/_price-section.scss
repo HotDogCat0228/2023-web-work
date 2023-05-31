@@ -1,0 +1,37 @@
+.price-card {
+  width: 49%;
+  border: 1px solid $color-2;
+  border-radius: 16px;
+  transition: border-color 0.5s ease; //使得顏色有時間緩衝變亮
+  // 卡片上半部 
+  &-header {
+    padding: 20px 32px;
+    ul {
+      height: 144px;
+    }
+  }
+  // 卡片下半部
+  &-footer {
+    padding: 20px 32px;
+  }
+  // 當鼠標移動字卡面時 外框顏色變亮
+  &:hover {
+    border-color: $color-6;
+  }
+}
+
+@media (max-width: 767px) {
+  .price-card {
+    width: 100%;
+    margin-bottom: 24px;
+    &-header {
+      padding: 20px;
+      ul {
+        height: 70px;
+      }
+      li {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

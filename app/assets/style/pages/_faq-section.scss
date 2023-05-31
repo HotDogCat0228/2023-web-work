@@ -1,0 +1,58 @@
+.faq-section {
+  @media (max-width: 767px) {
+    h2 {
+      margin-bottom: 24px;
+    }
+    .QA {
+      flex-direction: column;
+    }
+  }
+}
+.faq-list {
+    width: 70%;
+  }
+.faq {
+  padding: 20px ;
+  border-radius: 16px;
+  border: 1px solid $color-2;
+  transition: border-color 0.5s ease;
+  cursor: pointer;
+  &:hover {
+    border-color: $color-6;
+  }
+}
+.faq.active {
+  .answer {
+    max-height: 200px;
+  }
+  .plus {
+    background-image: url("../../assets/images/icons/remove.png");
+  }
+}
+.plus {
+  background-image: url("../../assets/images/icons/add.png");
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+
+//伸縮框設置:回答
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
+  p {
+    padding-top: 12px;
+    padding-left: 44px;
+  }
+}
+@media (max-width: 767px) {
+  .answer {
+    p {
+      padding-left: 0px;
+    }
+  }
+  .faq-list{
+    width: 100%;
+  }
+}

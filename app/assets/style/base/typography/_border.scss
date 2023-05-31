@@ -1,0 +1,17 @@
+// border
+.border-0{
+    border: 0;
+}
+.border-bottom{
+    border-bottom: 1px solid $color-6;
+}
+.border-bottom-white{
+    border-bottom: 1px solid $color-2;
+}
+
+.border-top{
+    border-top: 1px solid $color-5;
+}
+.border-gray{
+    border-color: $color-5;
+}
