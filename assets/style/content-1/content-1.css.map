@@ -1,1 +1,0 @@
-{"version":3,"sources":["content-1/content-1.scss"],"names":[],"mappings":"AAAA;EACI,iBAAiB;EACjB,oBAAoB,EAAA","file":"content-1.css","sourcesContent":[".content-1{\r\n    padding-top: 40px;\r\n    padding-bottom: 40px;\r\n}"]}
