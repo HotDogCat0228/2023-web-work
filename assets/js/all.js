@@ -10,7 +10,7 @@ var swiper = new Swiper("#mySwiper", {
 var currentURL = window.location.href;
 var pageName = currentURL.substring(currentURL.lastIndexOf("/") + 1);
 
-if (pageName == "index.html" || pageName == "index.html#" || pageName == "#" || pageName == "") {
+if (true) {
   var el = document.querySelector('.footer-bottom');
   el.innerHTML = '<p class="mr-100 order-1">AI工具王 © 2023</p>' + '<div class="d-flex order-2">' + '<a class="mr-20 href-hover" href="https://www.facebook.com/">Facebook</a>' + '<a class="mr-20 href-hover" href="https://twitter.com/?lang=zh-Hant">Twitter</a>' + '<a class="href-hover" href="https://www.instagram.com/">Instagram</a>' + '</div>' + '<p class="d-flex order-3 href-hover" id="scrollToTop">Back to top <span class="material-symbols-outlined">' + 'arrow_upward' + '</span></p>';
 }
