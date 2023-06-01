@@ -9,7 +9,7 @@ var swiper = new Swiper("#mySwiper", {
 //get
 var currentURL = window.location.href;
 var pageName = currentURL.substring(currentURL.lastIndexOf("/") + 1);
-if(pageName  == "index.html" || pageName  == "index.html#" || pageName  == "#" || pageName == ""){
+if(true){
   let el = document.querySelector('.footer-bottom');
   el.innerHTML = '<p class="mr-100 order-1">AI工具王 © 2023</p>'+
   '<div class="d-flex order-2">'+
