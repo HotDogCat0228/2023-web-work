@@ -17,13 +17,20 @@
 
 <body>
   <header class="header  padding-top-bottom-20 container">
-    <div class="d-flex justify-content-between padding-bottom-20 border-bottom">
+    <nav class="d-flex justify-content-between padding-bottom-20 border-bottom">
     <h1><a href="#"><img src="./assets/images/logo.png" alt="logo">AI工具王</a></h1>
-    <ul class="d-flex">
-      <li><a class="font-bold mr-20 href-hover" href="index.html">首頁</a></li>
-      <li><a class="font-bold href-hover" href="pricing.html">定價</a></li>
+    <ul class="navbar d-flex">
+      <li><a class="fw-700 mr-20 href-hover" href="index.html">首頁</a></li>
+      <li><a class="fw-700 href-hover" href="pricing.html">定價</a></li>
     </ul>
-    </div>  
+    <a href="#" class="menu-btn font-sixth"><span class="menu-icon material-symbols-outlined">
+      menu
+    </span></a>
+  </nav>
+  <ul class="menu">
+    <li class="menu-list mb-8"><a href="index.html" class="font-sixth fz-80 fw-900">首頁</a></li>
+    <li class="menu-list"><a href="pricing.html" class="font-sixth fz-80 fw-900">定價</a></li>
+  </ul>  
   </header>
 
   <%- contents %>

@@ -18,9 +18,11 @@
 @import "./layout/layout";
 
 // components
+@import "./components/animation";
 @import "./components/button";
 
 // pages
+@import "./pages/slogan-section";
 @import "./pages/service-section";
 @import "./pages/partner-section";
 @import "./pages/AI-section";

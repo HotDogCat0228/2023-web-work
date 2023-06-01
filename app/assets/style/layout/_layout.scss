@@ -11,6 +11,7 @@
 
 //   header
 .header {
+  position: fixed;
   h1 {
     a {
       width: 250px;
@@ -25,6 +26,9 @@
     padding-bottom: 8px;
   }
   @media (max-width: 767px) {
+    .navbar{
+      display: none;
+    }
     h1 {
       display: flex;
       align-items: center;

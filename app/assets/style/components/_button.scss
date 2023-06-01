@@ -1,62 +1,91 @@
 // button
-.btn{
-    padding: 20px 40px;
-    border-radius: 20px;
-    font-weight: 700;
-    border: 1px solid $color-6;
-    text-align: center;
-    font-size: 16px;
+.btn {
+  padding: 20px 40px;
+  border-radius: 20px;
+  font-weight: 700;
+  border: 1px solid $color-6;
+  text-align: center;
+  font-size: 16px;
 }
-.btn-sm{
-    width: 160px;
+.btn-sm {
+  width: 160px;
 }
-.btn-lg{
-    width: 180px;
+.btn-lg {
+  width: 180px;
 }
-.little-btn{
-    padding: 8px 16px;
+.little-btn {
+  padding: 8px 16px;
 }
-.btn:hover{
-    background: $color-6;
-    color: $color-1;
+.btn:hover {
+  background: $color-6;
+  color: $color-1;
 }
-.btn-gray{
-    color: $color-3;
-    padding: 8px 16px;
-    font-weight: 400;
+.btn-gray {
+  color: $color-3;
+  padding: 8px 16px;
+  font-weight: 400;
 }
-.btn-gray:active{
-    color: $color-1;
-    background: $color-3;
+.btn-gray:active {
+  color: $color-1;
+  background: $color-3;
 }
-.btn-gray:hover{
-    color: $color-1;
-    background:$color-5;
-    font-weight: 700;
+.btn-gray:hover {
+  color: $color-1;
+  background: $color-5;
+  font-weight: 700;
 }
-.btn-gray-start{
-    color: $color-1;
-    background:$color-5;
-    font-weight: 700;
+.btn-gray-start {
+  color: $color-1;
+  background: $color-5;
+  font-weight: 700;
 }
-.btn-black{
-    color: $color-1;
-    width: 48px;
-    height: 48px;
-    padding: 12px;
-    font-size: 14px;
-    font-weight: 400;
+.btn-black {
+  color: $color-1;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 400;
 }
-.btn-black:active{
-    color: $color-6;
-    background:$color-1;
+.btn-black:active {
+  color: $color-6;
+  background: $color-1;
 }
-.btn-black-start{
-    color: $color-6;
-    background:$color-1;
+.btn-black-start {
+  color: $color-6;
+  background: $color-1;
 }
-.btn-black:hover{
-    color: $color-1;
-    background: $color-5;
+.btn-black:hover {
+  color: $color-1;
+  background: $color-5;
 }
-
+.menu-btn {
+  display: none;
+}
+.menu {
+  display: none;
+}
+@media (max-width: 767px) {
+  .menu-btn {
+    display: block;
+  }
+  .menu {
+    background: $color-1;
+    padding-top: 192px;
+    padding-bottom: 192px;
+    z-index: 2;
+    max-width: 992px;
+    overflow-x: hidden;
+    .menu-list {
+      padding: 0;
+      margin: 0 auto;
+      text-align: center;
+      a {
+        font-size: 80px;
+      }
+    }
+  }
+  .menu.active{
+    display: block;
+  }
+}
