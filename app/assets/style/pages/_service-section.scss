@@ -32,7 +32,7 @@
 .service-card{
     max-width: 32%;
     padding: 85.67px 39px 79px 39px;
-    border: 1px solid #fff;
+    border: 1px solid $color-2;
     border-radius: 16px;
     h3{
         color: $color-6;
@@ -48,8 +48,6 @@
 .service-icon{
     font-size: 67px !important;
     color: #fff;
-    width: 60px;
-    height: 60px;
 }
 @media (max-width:767px) {
     .service-card-list{

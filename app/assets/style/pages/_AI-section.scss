@@ -42,11 +42,6 @@
 .dropdown-144 {
   width: 144px;
 }
-@media(max-width:767px){
-  .dropdown-240 {
-    width: 100%;
-  }
-}
 .dropdown-btn {
   display: flex;
   align-items: center;
@@ -79,7 +74,6 @@
     padding: 4px 40px;
   }
 .dropdown-menu a {
-  width: 168px;
   color: #000000;
   text-align: left;
 }

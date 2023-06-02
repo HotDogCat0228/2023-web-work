@@ -59,33 +59,4 @@
   color: $color-1;
   background: $color-5;
 }
-.menu-btn {
-  display: none;
-}
-.menu {
-  display: none;
-}
-@media (max-width: 767px) {
-  .menu-btn {
-    display: block;
-  }
-  .menu {
-    background: $color-1;
-    padding-top: 192px;
-    padding-bottom: 192px;
-    z-index: 2;
-    max-width: 992px;
-    overflow-x: hidden;
-    .menu-list {
-      padding: 0;
-      margin: 0 auto;
-      text-align: center;
-      a {
-        font-size: 80px;
-      }
-    }
-  }
-  .menu.active{
-    display: block;
-  }
-}
+

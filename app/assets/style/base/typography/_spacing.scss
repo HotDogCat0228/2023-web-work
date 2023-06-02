@@ -1,3 +1,14 @@
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
+
 // margin
 
 //margin-right
@@ -27,6 +38,9 @@
 .mb-32{
   margin-bottom: 32px;
 }
+.mb-36{
+  margin-bottom: 36px;
+}
 .mb-40 {
   margin-bottom: 40px;
 }
@@ -38,6 +52,12 @@
 }
 .mb-150 {
   margin-bottom: 150px;
+}
+.mb-160 {
+  margin-bottom: 160px;
+}
+.mb-200{
+  margin-bottom: 200px;
 }
 .ml-12 {
   margin-left: 12px;
@@ -52,6 +72,9 @@
 // padding
 .padding-top-bottom-20 {
   padding: 20px 0;
+}
+.padding-top-bottom-32 {
+  padding: 32px 0;
 }
 .padding-top-bottom-40 {
   padding: 40px 0;

@@ -1,16 +1,10 @@
 // container
-.container {
-  max-width: $container-width;
-  margin: 0 auto;
-}
-@media (max-width: 767px) {
-  .container {
-    padding: 40px 12px;
-  }
-}
+
 
 //   header
 .header {
+  
+  background-color: $color-1;
   h1 {
     a {
       width: 250px;
@@ -25,6 +19,9 @@
     padding-bottom: 8px;
   }
   @media (max-width: 767px) {
+    z-index: 3;
+    position: fixed;
+    width: 100%;
     .navbar{
       display: none;
     }
@@ -40,6 +37,34 @@
         height: 24px;
       }
     }
+  }
+}
+//menu
+.menu-btn {
+  display: none;
+}
+.menu {
+  display: none;
+}
+@media (max-width: 767px) {
+  .menu-btn {
+    display: block;
+  }
+  .menu {
+    background: $color-1;
+    padding-top: 200px;
+    z-index: 2;
+    max-width: 992px;
+    overflow-x: hidden;
+    .menu-list {
+      text-align: center;
+      a {
+        font-size: 80px;
+      }
+    }
+  }
+  .menu.active{
+    display: block;
   }
 }
 //   footer
@@ -68,6 +93,7 @@
 .footer-bottom {
   padding-top: 32px;
   padding-bottom: 32px;
+  margin-bottom: 40px;
   .order-3 {
     cursor: pointer;
   }

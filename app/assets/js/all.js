@@ -17,12 +17,17 @@ if(true){
   '<a class="mr-20 href-hover" href="https://twitter.com/?lang=zh-Hant">Twitter</a>'+
   '<a class="href-hover" href="https://www.instagram.com/">Instagram</a>'+
   '</div>'+
-  '<p class="d-flex order-3 href-hover" id="scrollToTop">Back to top <span class="material-symbols-outlined">'+
+  '<a href="index.html" class="d-flex order-3 href-hover" id="scrollToTop">Back to top <span class="material-symbols-outlined">'+
   'arrow_upward'+
   '</span></p>';
 }
 console.log(pageName);
 
+//btn
+
+$('.btn').on('click',function(e){
+  e.preventDefault();
+})
 
 var filterData = [
   { className: "filter-all", text: "所有類型" },
@@ -44,14 +49,14 @@ var moduleData = [
 //menu
 let getMenuBtn = document.querySelector('.menu-icon')
 let btnCount = 1;
-$('.menu-btn').on('click',function(){
+$('.menu-btn').on('click',function(e){
+  e.preventDefault();
   btnCount++;
   if (btnCount%2==0){
     getMenuBtn.textContent = "close";
   }else{
     getMenuBtn.textContent = "menu";
   }
-  // $('.menu').toggleClass('active');
   $('.menu').slideToggle();
 })
 //jQuery dropdown
@@ -90,25 +95,6 @@ $('.new-to-old').on('click',function(e) {
   $('#arrangement-btnText').text($(this).text());
   $('#arrangement-menu').classList.remove('show');
 });
-
-
-
-// var cards = document.querySelectorAll('.partner-card');
-
-
-// // 找到最大的卡片高度(Swiper使用時高度會跑掉)
-// var maxHeight = 0;
-// cards.forEach(function(card) {
-//   var height = card.offsetHeight;
-//   if (height > maxHeight) {
-//     maxHeight = height;
-//   }
-// });
-
-// // 所有卡片元素的高度最大高度
-// cards.forEach(function(card) {
-//   card.style.height = maxHeight + 'px';
-// });
 
 
 

@@ -1,36 +1,29 @@
-.text-middle{
-    vertical-align: middle;
+.text-middle {
+  vertical-align: middle;
 }
-.text-align-right{
-    text-align: right;
+.text-align-right {
+  text-align: right;
 }
-
 
 //a hover
-.href-hover:hover{
-    color: $surface-color;
+.href-hover:hover {
+  color: $surface-color;
 }
-.over{
- overflow: hidden;
+.over {
+  overflow: hidden;
 }
-
 
 // RWD針對content4區塊進行水平滑動
-@media (max-width:767px){
-    .overflow-x{ //container
-        overflow-x: auto;
-        white-space: nowrap;
-        &::-webkit-scrollbar {
-            display: none;
-        }
-    }
-    .overflow-x-scroll{ //content
-        overflow-x: scroll;
-    }
+
+.overflow-x {
+  //container
+  overflow-x: auto;
+  white-space: nowrap;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
-
-
-
-
-
-
+.overflow-x-scroll {
+  //content
+  overflow-x: scroll;
+}

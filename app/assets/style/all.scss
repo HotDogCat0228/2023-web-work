@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0');
 
 // utils
 @import "./utils/variable";
@@ -14,12 +14,18 @@
 @import "./base/typography/font-weight";
 @import "./base/typography/font-color";
 @import "./base/typography/line-height";
-// layout
-@import "./layout/layout";
 
 // components
 @import "./components/animation";
 @import "./components/button";
+
+
+// layout
+@import "./layout/layout";
+
+
+
+@import "grid";
 
 // pages
 @import "./pages/slogan-section";
@@ -31,6 +37,7 @@
 @import "./pages/faq-section";
 @import "./pages/buy-slogan-section";
 
-@import "grid";
+
+
 
 

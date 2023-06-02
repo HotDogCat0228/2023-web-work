@@ -6,6 +6,9 @@ body{
     font-family: $font-style;
     background: $color-1;
 }
+main{
+    padding-top: 40px;
+}
 img{
     display: block;
     max-width: 100%;
@@ -16,10 +19,10 @@ h2{
     font-size: 32px;
     font-weight: 900;
 }
-nav{
-    position: relative;
-}
 @media(max-width:767px){
+    main{
+        padding-top: 110px;
+    }
     h2{
         font-size: 20px;
     }
