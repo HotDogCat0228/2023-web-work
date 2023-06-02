@@ -425,7 +425,7 @@ span {
 .btn-lg {
   width: 180px; }
 
-@media (max-width: 767px) {
+@media (max-width: 200px) {
   .btn-sm, .btn-lg {
     width: 100%; } }
 
