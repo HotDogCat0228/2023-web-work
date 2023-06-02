@@ -12,7 +12,7 @@ var pageName = currentURL.substring(currentURL.lastIndexOf("/") + 1);
 
 if (true) {
   var el = document.querySelector('.footer-bottom');
-  el.innerHTML = '<p class="mr-100 order-1">AI工具王 © 2023</p>' + '<div class="d-flex order-2 link-rwd">' + '<a class="mr-20 href-hover" href="https://www.facebook.com/">Facebook</a>' + '<a class="mr-20 href-hover" href="https://twitter.com/?lang=zh-Hant">Twitter</a>' + '<a class="href-hover" href="https://www.instagram.com/">Instagram</a>' + '</div>' + '<a href="index.html" class="d-flex order-3 href-hover" id="scrollToTop">Back to top <span class="material-symbols-outlined">' + 'arrow_upward' + '</span></p>';
+  el.innerHTML = '<p class="mr-100 order-1">AI工具王 © 2023</p>' + '<div class="d-flex order-2 link-rwd">' + '<a class="mr-20 href-hover" href="https://www.facebook.com/">Facebook</a>' + '<a class="mr-20 href-hover" href="https://twitter.com/?lang=zh-Hant">Twitter</a>' + '<a class="href-hover" href="https://www.instagram.com/">Instagram</a>' + '</div>' + '<a href="./index.html" class="d-flex order-3 href-hover" id="scrollToTop">Back to top <span class="material-symbols-outlined">' + 'arrow_upward' + '</span></p>';
 }
 
 console.log(pageName); //btn
@@ -110,7 +110,8 @@ $('.new-to-old').on('click', function (e) {
 }); //jQuery back to top
 
 $(function () {
-  $('#scrollToTop').on("click", function () {
+  $('#scrollToTop').on("click", function (e) {
+    e.preventDefault();
     $('html, body').animate({
       scrollTop: 0
     }, 500);
