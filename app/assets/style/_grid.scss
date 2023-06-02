@@ -12,9 +12,11 @@
 .over {
   overflow: hidden;
 }
-
-// RWD針對content4區塊進行水平滑動
-
+@media(max-width:300px){
+.link-rwd{
+  flex-direction: column;
+}
+}
 .overflow-x {
   //container
   overflow-x: auto;

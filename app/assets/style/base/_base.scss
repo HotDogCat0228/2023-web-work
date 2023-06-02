@@ -26,6 +26,12 @@ h2{
     h2{
         font-size: 20px;
     }
+    
+}
+@media(max-width:300px){
+    nav{
+       flex-direction: column;
+    }
 }
 h4{
     font-size: 12px;
