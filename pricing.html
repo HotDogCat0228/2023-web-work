@@ -8,34 +8,43 @@
   
   <title>購買頁面</title>
   
-  <link rel="stylesheet" href="./assets/style/all.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
   <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
 <body>
-  <header class="header  padding-top-bottom-20 container">
+  <header class="header flex-colum padding-top-20 container">
     <nav class="d-flex justify-content-between padding-bottom-20 border-bottom">
     <h1><a href="#"><img src="./assets/images/logo.png" alt="logo">AI工具王</a></h1>
     <ul class="navbar d-flex">
-      <li><a class="fw-700 mr-20 href-hover" href="index.html">首頁</a></li>
-      <li><a class="fw-700 href-hover" href="pricing.html">定價</a></li>
+    <li><a class="fw-700 mr-20 href-hover" href="index.html">首頁</a></li>
+    <li><a class="fw-700 href-hover" href="pricing.html">定價</a></li>
     </ul>
     <a href="#" class="menu-btn font-sixth"><span class="menu-icon material-symbols-outlined">
       menu
     </span></a>
-  </nav>
-  <ul class="menu">
+    </nav>
+    <ul class="menu">
     <li class="menu-list mb-8"><a href="index.html" class="font-sixth fz-80 fw-900">首頁</a></li>
-    <li class="menu-list"><a href="pricing.html" class="font-sixth fz-80 fw-900">定價</a></li>
-  </ul>  
+    <li class="menu-list mb-200"><a href="pricing.html" class="font-sixth fz-80 fw-900">定價</a></li>
+    <div class="menu-footer border-top border-sixth padding-top-bottom-32 container">
+    <p class="mb-36">AI工具王 © 2023</p>
+    <div class="d-flex">
+    <a class="mr-20 href-hover" href="https://www.facebook.com/">Facebook</a>
+    <a class="mr-20 href-hover" href="https://twitter.com/?lang=zh-Hant">Twitter</a>
+    <a class="href-hover" href="https://www.instagram.com/">Instagram</a>
+    </div>
+    </div>
+    </ul>
+    
   </header>
 
   <main>
 <!-- 購買標語 -->
-<section class="buy-slogan-section padding-top-bottom-40 container">
+<section class="buy-slogan-section mb-160 container">
     <p class="fz-120 fw-900 mb-80 line-height-12">用多少，<br>付多少。</p>
     <div class="d-flex justify-content-end mb-150 fw-700">
     <p class="buy-slogan-text fz-48 line-height-12 fw-900 width-50">我們相信，最靈活的取用機制，才能最大化的幫助你業務的推動。</p>
@@ -48,7 +57,7 @@
     </ul>
 </section>
 <!-- 定價 -->
-<section class="price-section padding-top-bottom-40 container">
+<section class="price-section mb-160 container">
     <h2 class="mb-80">定價</h2>
     <ul class="d-flex f-wrap justify-content-between f-wrap">
         <li class="price-card mb-24 d-flex flex-colum">
@@ -118,7 +127,7 @@
     </ul>
 </section>
 <!-- 使用規範 -->
-<div class="law-section padding-top-bottom-120 container">
+<div class="law-section mb-160 container">
     <div class="law d-flex justify-content-between">
     <h2>使用規範</h2>
     <ul>
@@ -138,14 +147,14 @@
     </div>  
 </div>
 <!-- AI功能 -->
-<section class="AI-section">
+<section class="AI-section mb-160">
   <div class="container">
   <!-- header -->
   <header class="AI-section-header">
-    <h2 class="fz-80 fw-900 mb-80 line-height-12 font-primary">這些超酷的應用，都來自 AI工具王</h2>
+    <h2 class="fz-80 mb-80 line-height-12 font-primary">這些超酷的應用，都來自 AI工具王</h2>
     <div class="search-row">
     <label for="search" class="">
-    <input class="search border-0 mb-24" type="text" name="" id="search" placeholder="輸入關鍵字搜尋">
+    <input class="fz-16 search border-0 mb-24" type="text" name="" id="search" placeholder="輸入關鍵字搜尋">
       <p class="search-icon font-third d-flex align-item-center"><span class="material-symbols-outlined">
         search
       </span></p>
@@ -155,53 +164,53 @@
     <div class="d-flex align-item-center f-wrap justify-content-between mb-40">
     <div class="dropdown order-1">
     <button type="button" class="dropdown-btn fs-normal" id="filter-btn">
-      <span class="dropdown-btnText"  id="filter-btnText">篩選</span>
+      <span class="dropdown-btnText fz-16"  id="filter-btnText">篩選</span>
       <span class="material-symbols-outlined">
-        expand_more
+        filter_alt
       </span>
     <ul class="dropdown-menu dropdown-240" id="filter-menu">
       <!-- AI 模型 -->
       <div class="dropdown-module mb-20">
       <h4>AI 模型</h4>
       <li>
-        <a href="#" class="module-all">所有模型</a>
+        <a href="#" class="fz-16 module-all">所有模型</a>
       </li>
       <li>
-        <a href="#" class="module-1">卡卡</a>
+        <a href="#" class="fz-16  module-1">卡卡</a>
       </li>
       <li>
-        <a href="#" class="module-2">杰杰</a>
+        <a href="#" class="fz-16  module-2">杰杰</a>
       </li>
       <li>
-        <a href="#" class="module-3">琪琪</a>
+        <a href="#" class="fz-16  module-3">琪琪</a>
       </li>
       <li>
-        <a href="#" class="module-4">昊昊</a>
+        <a href="#" class="fz-16  module-4">昊昊</a>
       </li>
     </div>
     <!-- 類型 -->
     <div class="dropdown-type">
       <h4 class="padding-top-20 border-top border-gray">類型</h4>
       <li>
-        <a href="#" class="filter-all">所有類型</a>
+        <a href="#" class="fz-16  filter-all">所有類型</a>
       </li>
       <li>
-        <a href="#" class="filter-1">篩選項目 1</a>
+        <a href="#" class="fz-16 filter-1">篩選項目 1</a>
       </li>
       <li>
-        <a href="#" class="filter-2">篩選項目 2</a>
+        <a href="#" class="fz-16 filter-2">篩選項目 2</a>
       </li>
       <li>
-        <a href="#" class="filter-3">篩選項目 3</a>
+        <a href="#" class="fz-16 filter-3">篩選項目 3</a>
       </li>
       <li>
-        <a href="#" class="filter-4">篩選項目 4</a>
+        <a href="#" class="fz-16 filter-4">篩選項目 4</a>
       </li>
       <li>
-        <a href="#" class="filter-5">篩選項目 5</a>
+        <a href="#" class="fz-16 filter-5">篩選項目 5</a>
       </li>
       <li>
-        <a href="#" class="filter-6">篩選項目 6 </a>
+        <a href="#" class="fz-16 filter-6">篩選項目 6 </a>
       </li>
     </div>
     </ul>
@@ -221,16 +230,16 @@
   <!-- button -->
   <div class="dropdown  order-3">
   <button type="button" class="dropdown-btn fs-normal" id="arrangement-btn">
-    <span class="dropdown-btnText" id="arrangement-btnText">由新到舊</span>
+    <span class="dropdown-btnText fz-16" id="arrangement-btnText">由新到舊</span>
     <span class="material-symbols-outlined">
       expand_more
     </span>
     <ul class="dropdown-menu dropdown-144" id="arrangement-menu">
       <li class="mb-8">
-        <a href="#" class="new-to-old">由新到舊</a>
+        <a href="#" class="fz-16 new-to-old">由新到舊</a>
       </li>
       <li>
-        <a href="#" class="old-to-new">由舊到新</a>
+        <a href="#" class="fz-16 old-to-new">由舊到新</a>
       </li>
     </ul>
   </button>
@@ -245,7 +254,7 @@
         <img src="./assets/images/tool1.png" alt="picture-1">
       </div>            
         <div class="card-padding flex-grow-1">
-        <h3 class="fw-900 fz-20 mb-12">Chatbot Builder</h2>
+        <h3 class="fw-900 fz-20 mb-12">Chatbot Builder</h3>
         <p class="fz-14 font-second">建立智能化的聊天機器人，解答常見問題、提供客戶支援、收集反饋等。</p>
         </div>          
         <div class="d-flex justify-content-between card-padding border-top">
@@ -264,7 +273,7 @@
         <img src="./assets/images/tool2.png" alt="picture-2">
       </div>            
         <div class="card-padding flex-grow-1">
-        <h3 class="fw-900  fz-20   mb-12">Image Recognition Platform</h2>
+        <h3 class="fw-900  fz-20   mb-12">Image Recognition Platform</h3>
         <p class="fz-14 font-second">專業的圖像識別平台，識別圖像、分類、標記等。
         </p>
         </div>
@@ -284,7 +293,7 @@
         <img src="./assets/images/tool3.png" alt="picture-3">
       </div>
         <div class="card-padding flex-grow-1">
-        <h3 class="fw-900  fz-20  mb-12">Language Translation API</h2>
+        <h3 class="fw-900  fz-20  mb-12">Language Translation API</h3>
         <p class="fz-14 font-second" style="height: 42px;">專業的語言翻譯 API，實現文本翻譯功能，支援多種格式的文本。
         </p>
         </div>
@@ -304,7 +313,7 @@
         <img src="./assets/images/tool4.png" alt="picture-4">
       </div>
         <div class="card-padding flex-grow-1">
-        <h3 class="fw-900  fz-20  mb-12">Language Translation API</h2>
+        <h3 class="fw-900  fz-20  mb-12">Language Translation API</h3>
         <p class="fz-14 font-second">專業的語言翻譯 API，實現文本翻譯功能，支援多種格式的文本。</p>
         </div>
         <div class="d-flex justify-content-between card-padding border-top">
@@ -323,7 +332,7 @@
         <img src="./assets/images/tool5.png" alt="picture-5">
       </div>
         <div class="card-padding flex-grow-1">
-        <h3 class="fw-900  fz-20  mb-12">Sentiment Analysis API</h2>
+        <h3 class="fw-900  fz-20  mb-12">Sentiment Analysis API</h3>
         <p class="fz-14 font-second">自動識別文本中的情感傾向，包括正向、負向和中性等。適用於情感分析、社交媒體監控、市場調查等。</p>
         </div>
         <div class="d-flex justify-content-between card-padding border-top">
@@ -342,7 +351,7 @@
         <img src="./assets/images/tool6.png" alt="picture-6">
       </div>
         <div class="card-padding flex-grow-1">
-        <h3 class="fw-900  fz-20  mb-12">Voice Assistant SDK</h2>
+        <h3 class="fw-900  fz-20  mb-12">Voice Assistant SDK</h3>
         <p class="fz-14 font-second">通過語音控制應用程式、設備，實現多種功能，例如播放音樂、查詢天氣、發送信息等。</p>
         </div>
         <div class="d-flex justify-content-between card-padding border-top">
@@ -371,7 +380,7 @@
 </div>
 </section>
 <!-- 問答區 -->
-<section class="faq-section padding-top-bottom-160 container">
+<section class="faq-section mb-160 container">
     <div class="QA d-flex justify-content-between">
     <h2>常見問題</h2>
     <ul class="faq-list">
