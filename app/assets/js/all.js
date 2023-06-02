@@ -17,7 +17,7 @@ if(true){
   '<a class="mr-20 href-hover" href="https://twitter.com/?lang=zh-Hant">Twitter</a>'+
   '<a class="href-hover" href="https://www.instagram.com/">Instagram</a>'+
   '</div>'+
-  '<a href="./index.html" class="d-flex order-3 href-hover" id="scrollToTop">Back to top <span class="material-symbols-outlined">'+
+  '<a href="#" class="d-flex order-3 href-hover" id="scrollToTop">Back to top <span class="material-symbols-outlined">'+
   'arrow_upward'+
   '</span></p>';
 }
