@@ -46,13 +46,19 @@
 .menu {
   display: none;
 }
+.menu-header{
+  height: 70%;
+}
+.menu-footer{
+  height: 30%;
+}
 @media (max-width: 767px) {
   .menu-btn {
     display: block;
   }
   .menu {
     background: $color-1;
-    padding-top: 200px;
+    height: 100vh;
     z-index: 2;
     max-width: 992px;
     overflow-x: hidden;

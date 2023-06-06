@@ -52,11 +52,11 @@
     background: $color-6;
     width: var(
       --swiper-pagination-bullet-width,
-      var(--swiper-pagination-bullet-size, 16px)
+      var(--swiper-pagination-bullet-size, 12px)
     ) !important;
     height: var(
       --swiper-pagination-bullet-height,
-      var(--swiper-pagination-bullet-size, 16px)
+      var(--swiper-pagination-bullet-size, 12px)
     ) !important;
   }
   :root {
