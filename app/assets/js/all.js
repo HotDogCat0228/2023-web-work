@@ -124,3 +124,174 @@ faqs.forEach((faq)=>{
 
 
 
+// API串接 
+
+// 1.宣告變數
+const apiPath = 'https://2023-engineer-camp.zeabur.app';
+const list = document.querySelector('#list'); //抓取DOM
+const pagination = document.querySelector('#pagination');
+
+const data = {
+  type: '',
+  sort: 0,
+  page: 1,
+  search: '',
+}
+
+let worksData = []
+let pagesData = {}
+
+// 2.定義工具函式
+function getData({ type, sort, page, search }) {
+  const apiUrl = `${apiPath}/api/v1/works?sort=${sort}&page=${page}&${type ? `type=${type}&` : ''}${search ? `search=${search}` : ''}`
+  axios.get(apiUrl)
+    .then((res) => {
+      worksData = res.data.ai_works.data;
+      pagesData = res.data.ai_works.page;
+
+      renderWorks();
+      renderPages();
+    })
+}
+
+getData(data);
+
+//3.將作品渲染至業面
+function renderWorks() {
+  let works = '';
+
+  worksData.forEach((item) => {
+    works += /*html*/`<li class="AI-card">
+    <div class="img-list">
+      <img src="${item.imageUrl}" alt="ai image">
+    </div>            
+      <div class="card-padding flex-grow-1">
+      <h3 class="fw-900 fz-20 mb-12">${item.title}</h3>
+      <p class="fz-14 font-second">${item.description}</p>
+      </div>          
+      <div class="d-flex justify-content-between card-padding border-top">
+          <h3 class="fw-700">AI 模型</h3>
+          <p class="font-primary">${item.model}</p>
+      </div>
+      <div class="d-flex justify-content-between card-padding border-top">
+          <p class="font-primary">#${item.type}</p>
+          <p><a href="${item.link}"><span class="material-symbols-outlined">
+            share
+            </span></a></p>
+      </div>            
+</li>`
+  });
+
+  list.innerHTML = works;
+}
+
+// 切換分頁
+{/* <ul class="d-flex justify-content-end">
+  <li><a class="btn btn-black btn-black-start" href="#" id="page-link">1</a></li>
+  <li><a class="btn btn-black" href="#" id="page-link">2</a></li>
+  <li><a class="btn btn-black" href="#" id="page-link">3</a></li>
+  <li><a class="btn btn-black" href="#" id="page-link">4</a></li>
+  <li><a class="btn btn-black" href="#" id="page-link">5</a></li>
+  <li><a class="btn btn-black" href="#" id="page-link"><span class="material-symbols-outlined">
+    arrow_forward_ios
+    </span></a></li>
+</ul> */}
+function changePage(pagesData) {
+  const pageLinks = document.querySelectorAll('#page-link')
+  let pageId = '';
+
+  pageLinks.forEach((item) => {
+
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      pageId = e.target.dataset.page;
+      data.page = Number(pageId);
+
+      if (!pageId) {
+        data.page = Number(pagesData.current_page) + 1
+      }
+
+      getData(data);
+    });
+  });
+}
+// 分頁選染至畫面
+function renderPages() {
+  let pageStr = '';
+
+  for (let i = 1; i <= pagesData.total_pages; i += 1) {
+    pageStr += /*html*/`<li>
+      <a class="${pagesData.current_page == i ? 'disabled' : ''} btn btn-black ${pagesData.current_page == i ? 'active' : ''}" href="#" id="page-link" data-page="${i}">${i}</a>
+    </li>`
+  };
+
+  if (pagesData.has_next) {
+    pageStr +=  /*html*/`<li>
+      <a class="" href="#" id="page-link">
+        <span class="material-symbols-outlined">
+          arrow_forward_ios
+        </span>
+      </a>
+    </li>`
+  };
+  pagination.innerHTML = pageStr
+
+  changePage(pagesData);
+}
+
+// 切換作品排序
+const desc = document.querySelector('#desc');
+const asc = document.querySelector('#asc');
+//  由新到舊 -> sort = 0
+desc.addEventListener('click', (e) => {
+  e.preventDefault();
+  data.sort = 0;
+  getData(data);
+})
+//  由舊到新 -> sort = 1
+asc.addEventListener('click', (e) => {
+  e.preventDefault();
+  data.sort = 1
+  getData(data);
+})
+
+
+
+
+// 切換作品類型
+const filterBtns = document.querySelectorAll('#class-btn');
+const typeBtns = document.querySelectorAll('#type-btn');
+const checkBtns = document.querySelectorAll('#type-item-check');
+console.log(checkBtns);
+filterBtns.forEach((item, i) => {
+  item.addEventListener('click', () => {
+    filterBtns.forEach(btn => btn.classList.remove("btn-gray-start"));
+    item.classList.add("btn-gray-start");
+    if (item.textContent === '全部') {
+      data.type = '';
+    } else {
+      data.type = item.textContent;
+    }
+    getData(data)
+  })
+})
+typeBtns.forEach((item,i) => {
+  item.addEventListener('click', () => {
+    if (item.textContent === '全部') {
+      data.type = '';
+    } else {
+      data.type = item.textContent;
+    }
+    getData(data)
+  })
+})
+
+// 搜尋
+const search = document.querySelector('#search');
+search.addEventListener('keydown', (e) => {
+  if (e.keyCode === 13) {
+    data.search = search.value
+    data.page = 1
+    getData(data);
+  }
+})

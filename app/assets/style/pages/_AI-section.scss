@@ -85,8 +85,12 @@
 .dropdown-menu.show {
   display: block;
 }
-
-
+.type-item-check{
+  display: none;
+}
+.type-item-check.active{
+  display: block;
+}
 .AI-card{
   width: 32%;
   border-left: 1px solid rgb(218, 211, 211);
@@ -96,7 +100,6 @@
   margin-bottom: 24px;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   .img-list{
       overflow: hidden;
       border-radius: 16px 16px 0px 0px;

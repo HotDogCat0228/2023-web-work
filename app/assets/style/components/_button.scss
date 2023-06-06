@@ -52,9 +52,12 @@
   font-size: 14px;
   font-weight: 400;
 }
-.btn-black:active {
+.btn-black.active {
   color: $color-6;
   background: $color-1;
+}
+.btn-black.disabled {
+  pointer-events: none;
 }
 .btn-black-start {
   color: $color-6;
