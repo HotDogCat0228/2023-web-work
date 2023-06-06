@@ -197,22 +197,22 @@
         <a href="#" class="fz-16  filter-all">所有類型</a>
       </li>
       <li>
-        <a href="#" class="fz-16 filter-1">篩選項目 1</a>
+        <a href="#" class="fz-16 filter-1">問答服務</a>
       </li>
       <li>
-        <a href="#" class="fz-16 filter-2">篩選項目 2</a>
+        <a href="#" class="fz-16 filter-2">虛擬客服</a>
       </li>
       <li>
-        <a href="#" class="fz-16 filter-3">篩選項目 3</a>
+        <a href="#" class="fz-16 filter-3">生活應用</a>
       </li>
       <li>
-        <a href="#" class="fz-16 filter-4">篩選項目 4</a>
+        <a href="#" class="fz-16 filter-4">程式知識</a>
       </li>
       <li>
-        <a href="#" class="fz-16 filter-5">篩選項目 5</a>
+        <a href="#" class="fz-16 filter-5">翻譯助手</a>
       </li>
       <li>
-        <a href="#" class="fz-16 filter-6">篩選項目 6 </a>
+        <a href="#" class="fz-16 filter-6">行銷文案</a>
       </li>
     </div>
     </ul>
@@ -220,13 +220,13 @@
   </div>
   
   <ul class="d-flex order-2 overflow-x">
-    <li class="little-btn"><a href="#" class="btn btn-gray btn-gray-start border-0">全部</a></li>
-    <li class="little-btn"><a href="#" class="btn btn-gray border-0">聊天</a></li>
-    <li class="little-btn"><a href="#" class="btn btn-gray border-0">影像辨識</a></li>
-    <li class="little-btn"><a href="#" class="btn btn-gray border-0">翻譯</a></li>
-    <li class="little-btn"><a href="#" class="btn btn-gray border-0">行銷</a></li>
-    <li class="little-btn"><a href="#" class="btn btn-gray border-0">客服</a></li>
-    <li class="little-btn"><a href="#" class="btn btn-gray border-0">生產力</a></li>
+    <li class="little-btn"><a href="#" class="btn btn-gray btn-gray-start border-0" id="filter-btn">全部</a></li>
+    <li class="little-btn"><a href="#" class="btn btn-gray border-0" id="filter-btn">問答服務</a></li>
+    <li class="little-btn"><a href="#" class="btn btn-gray border-0" id="filter-btn">虛擬客服</a></li>
+    <li class="little-btn"><a href="#" class="btn btn-gray border-0" id="filter-btn">生活應用</a></li>
+    <li class="little-btn"><a href="#" class="btn btn-gray border-0" id="filter-btn">程式知識</a></li>
+    <li class="little-btn"><a href="#" class="btn btn-gray border-0" id="filter-btn">翻譯助手</a></li>
+    <li class="little-btn"><a href="#" class="btn btn-gray border-0" id="filter-btn">行銷文案</a></li>
   </ul>
 
   <!-- button -->
@@ -238,10 +238,10 @@
     </span>
     <ul class="dropdown-menu dropdown-144" id="arrangement-menu">
       <li class="mb-8">
-        <a href="#" class="fz-16 new-to-old">由新到舊</a>
+        <a href="#" class="fz-16 new-to-old" id="desc">由新到舊</a>
       </li>
       <li>
-        <a href="#" class="fz-16 old-to-new">由舊到新</a>
+        <a href="#" class="fz-16 old-to-new" id="asc">由舊到新</a>
       </li>
     </ul>
   </button>
@@ -250,7 +250,7 @@
     </div>
 </header>
   <!-- AI-tools -->
-  <ul class="d-flex f-wrap justify-content-between">
+<ul class="d-flex f-wrap justify-content-between" id="list">
     <li class="AI-card">
       <div class="img-list">
         <img src="./assets/images/tool1.png" alt="picture-1">
@@ -368,7 +368,7 @@
         </div>
     </li>
 </ul>
-<ul class="d-flex justify-content-end">
+<ul class="d-flex justify-content-end" id="pagination">
   <li><a class="btn btn-black btn-black-start" href="#">1</a></li>
   <li><a class="btn btn-black" href="#">2</a></li>
   <li><a class="btn btn-black" href="#">3</a></li>
