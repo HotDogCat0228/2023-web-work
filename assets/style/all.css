@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -513,12 +512,18 @@ span {
 .menu {
   display: none; }
 
+.menu-header {
+  height: 70%; }
+
+.menu-footer {
+  height: 30%; }
+
 @media (max-width: 767px) {
   .menu-btn {
     display: block; }
   .menu {
     background: #020202;
-    padding-top: 200px;
+    height: 100vh;
     z-index: 2;
     max-width: 992px;
     overflow-x: hidden; }
@@ -648,7 +653,7 @@ span {
     font-weight: 400; }
 
 .service-icon {
-  font-size: 67px !important;
+  font-size: 67px;
   color: #fff; }
 
 @media (max-width: 767px) {
@@ -702,8 +707,8 @@ span {
     bottom: var(--swiper-pagination-bottom, 0px) !important; }
   .swiper-pagination-bullet {
     background: #FFFFFF;
-    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 16px)) !important;
-    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 16px)) !important; }
+    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 12px)) !important;
+    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 12px)) !important; }
   :root {
     --swiper-theme-color: white !important; } }
 
