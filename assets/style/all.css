@@ -583,6 +583,9 @@ span {
 .text-middle {
   vertical-align: middle; }
 
+.text-align-center {
+  text-align: center; }
+
 .text-align-right {
   text-align: right; }
 
@@ -890,6 +893,10 @@ span {
     padding: 20px 32px; }
   .AI-card img {
     border-radius: 16px 16px 0px 0px; }
+
+#list > i {
+  width: 31%;
+  margin-right: 1%; }
 
 @media (max-width: 767px) {
   .AI-card {
