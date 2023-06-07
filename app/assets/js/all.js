@@ -72,7 +72,7 @@ for(let i=0;i<filterData.length;i++){
   $(`.${filterData[i].className}`).on('click',function(e) {
   e.preventDefault();
   $('#filter-btnText').text($(this).text());
-  $('#filter-menu').classList.remove('show');
+  $('#filter-menu').removeClass('show');
 });
 }
 
@@ -80,20 +80,20 @@ for(let i=0;i<moduleData.length;i++){
   $(`.${moduleData[i].className}`).on('click',function(e) {
   e.preventDefault();
   $('#filter-btnText').text($(this).text());
-  $('#filter-menu').classList.remove('show');
+  $('#filter-menu').addClass('show');
 });
 }
 
 $('.old-to-new').on('click',function(e) {
   e.preventDefault();
   $('#arrangement-btnText').text($(this).text());
-  $('#arrangement-menu').classList.remove('show');
+  $('#arrangement-menu').removeClass('show');
 });
 
 $('.new-to-old').on('click',function(e) {
   e.preventDefault();
   $('#arrangement-btnText').text($(this).text());
-  $('#arrangement-menu').classList.remove('show');
+  $('#arrangement-menu').removeClass('show');
 });
 
 
@@ -140,7 +140,7 @@ const data = {
 
 let worksData = []
 let pagesData = {}
-
+let dataLength = 0;
 // 2.定義工具函式
 function getData({ type, sort, page, search }) {
   const apiUrl = `${apiPath}/api/v1/works?sort=${sort}&page=${page}&${type ? `type=${type}&` : ''}${search ? `search=${search}` : ''}`
@@ -148,7 +148,7 @@ function getData({ type, sort, page, search }) {
     .then((res) => {
       worksData = res.data.ai_works.data;
       pagesData = res.data.ai_works.page;
-
+      // console.log(worksData.length);資料數量
       renderWorks();
       renderPages();
     })
@@ -159,7 +159,8 @@ getData(data);
 //3.將作品渲染至業面
 function renderWorks() {
   let works = '';
-
+  if(worksData.length>0){
+  list.classList.remove('justify-content-center');
   worksData.forEach((item) => {
     works += /*html*/`<li class="AI-card">
     <div class="img-list">
@@ -179,23 +180,18 @@ function renderWorks() {
             share
             </span></a></p>
       </div>            
-</li>`
+  </li>`
   });
-
-  list.innerHTML = works;
+    list.innerHTML = works + '<i></i><i></i><i></i><i></i><i></i>';
+  }else{
+    list.classList.add('justify-content-center');
+    works = `<div class="flex-colum justift-content-center align-items-center"><img src="./assets/images/embarrassed.png" alt=""><p class="font-primary text-align-center">目前無資料</p></div>`;
+    list.innerHTML = works ; 
+  }
+  
 }
 
 // 切換分頁
-{/* <ul class="d-flex justify-content-end">
-  <li><a class="btn btn-black btn-black-start" href="#" id="page-link">1</a></li>
-  <li><a class="btn btn-black" href="#" id="page-link">2</a></li>
-  <li><a class="btn btn-black" href="#" id="page-link">3</a></li>
-  <li><a class="btn btn-black" href="#" id="page-link">4</a></li>
-  <li><a class="btn btn-black" href="#" id="page-link">5</a></li>
-  <li><a class="btn btn-black" href="#" id="page-link"><span class="material-symbols-outlined">
-    arrow_forward_ios
-    </span></a></li>
-</ul> */}
 function changePage(pagesData) {
   const pageLinks = document.querySelectorAll('#page-link')
   let pageId = '';
@@ -228,7 +224,7 @@ function renderPages() {
   if (pagesData.has_next) {
     pageStr +=  /*html*/`<li>
       <a class="" href="#" id="page-link">
-        <span class="material-symbols-outlined">
+        <span class="material-symbols-outlined">s
           arrow_forward_ios
         </span>
       </a>
@@ -262,7 +258,6 @@ asc.addEventListener('click', (e) => {
 const filterBtns = document.querySelectorAll('#class-btn');
 const typeBtns = document.querySelectorAll('#type-btn');
 const checkBtns = document.querySelectorAll('#type-item-check');
-console.log(checkBtns);
 filterBtns.forEach((item, i) => {
   item.addEventListener('click', () => {
     filterBtns.forEach(btn => btn.classList.remove("btn-gray-start"));
